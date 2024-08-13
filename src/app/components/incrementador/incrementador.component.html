@@ -1,0 +1,12 @@
+<div class="input-group">
+  <span class="input-group-btn">
+    <button (click)="cambiarValor(-5)" type="button" [ngClass]="[btnClass, isMinValue ? 'disabled' : '']"
+      ><i class="fa fa-minus"></i></button>
+  </span>
+  <input type="number" class="form-control" placeholder="Progreso" [formControl]="progreso" min="0" max="100" step="5"
+    (input)="onChange($event)">
+  <span class="input-group-btn">
+    <button (click)="cambiarValor(5)" type="button" [ngClass]="[btnClass, isMaxValue ? 'disabled' : '']"
+      ><i class="fa fa-plus"></i></button>
+  </span>
+</div>
